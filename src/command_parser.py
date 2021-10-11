@@ -42,9 +42,9 @@ class CommandParser:
             self._player.create_video(command[1], command[2], command[3])
 
         elif command[0].upper() == "DELETE_VIDEO":
-            # if len(command) != 1:
-            #     raise CommandException("Please enter delete_video comamnd followed by video_id")
-            self._player.delete_video()
+            if len(command) != 2:
+                raise CommandException("Please enter delete_video comamnd followed by video_id")
+            self._player.delete_video(command[1])
 
         elif command[0].upper() == "PLAY_RANDOM":
             self._player.play_random_video()

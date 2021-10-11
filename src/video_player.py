@@ -674,8 +674,8 @@ class VideoPlayer:
 
     
     
-    def delete_video(self):
-        self._video_library.delete_video()
+    def delete_video(self, video_id):
+        self._video_library.delete_video(video_id)
 
             
         

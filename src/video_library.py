@@ -55,12 +55,6 @@ class VideoLibrary:
         # videoTagsJoined = videoTagsJoined.replace(" ", " a ")
 
 
-
-        
-
-
-
-
         if videoTags != "":
             videoTagsJoined = ' '.join(map(str, videoTags))
             with open(Path(__file__).parent / "videos.txt", "a") as video_file:
@@ -72,8 +66,6 @@ class VideoLibrary:
 
 
     
-    
-
 
         self.__init__()
 
@@ -82,12 +74,12 @@ class VideoLibrary:
         print("Video successfully created!")
 
 
-    def delete_video(self):
+    def delete_video(self, video_id):
+
+        print(f"{video_id} is the video id")
 
         
 
-
-
-        self.__init__()
+        # self.__init__()
 
         print("Video successfully deleted!")
